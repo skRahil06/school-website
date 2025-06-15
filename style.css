@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #F5F5F5;
+  color: #002855;
+}
+
+#hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #002855, #001A40);
+  color: #FFD200;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1.flashy {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #FFD200, #FFFFFF, #FFD200);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #FFD200;
+  padding: 10px;
+}
+
+nav a {
+  margin: 5px 15px;
+  color: #002855;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 3px solid #FFD200;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.topper-card, .swiper-slide img {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.topper-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+form button {
+  background: #002855;
+  color: #FFD200;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+footer {
+  background: #002855;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.swiper {
+  margin-top: 30px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media(max-width: 768px) {
+  nav a {
+    margin: 5px 10px;
+  }
+}
