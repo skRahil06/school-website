@@ -1,48 +1,26 @@
-// Toppers carousel - autoplay, no arrows
-var toppersSwiper = new Swiper('.toppers-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3
-    }
-  }
-});
-
-// Gallery carousel - autoplay, no arrows
-var gallerySwiper = new Swiper('.gallery-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 10,
+// Sports swiper (text only)
+new Swiper('.sports-swiper', {
   loop: true,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3
-    }
-  }
 });
 
-// Smooth scroll for nav
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  });
+// Toppers swiper (images)
+new Swiper('.toppers-swiper', {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
+
+// Gallery swiper (images)
+new Swiper('.gallery-swiper', {
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 });
