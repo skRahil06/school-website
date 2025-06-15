@@ -143,3 +143,64 @@ footer {
     margin: 5px 10px;
   }
 }
+
+/* Already include existing styles from your working version! */
+
+/* Same size for images inside each carousel */
+.toppers-swiper img,
+.gallery-swiper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Sports carousel text style */
+.sports-swiper .swiper-slide {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Footer fade */
+footer {
+  background: linear-gradient(to bottom, transparent, #002855);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* ✅ Ensure images inside Swiper fit fully without cropping */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* show entire image without cutting */
+  max-height: 400px;   /* adjust height as needed */
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+    max-height: 250px;  /* smaller height for mobile */
+  }
+}
+
+/* Make sports achievements text centered and neat */
+.sports-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  height: 150px;            /* adjust height for desktop */
+  font-size: 1.5rem;        /* nice readable size */
+  text-align: center;       /* center text */
+  padding: 1rem;            /* some space inside */
+  background: #f0f8ff;      /* optional: light background for clarity */
+  border-radius: 10px;      /* optional: rounded corners */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .sports-swiper .swiper-slide {
+    height: 100px;          /* less height for mobile */
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}
